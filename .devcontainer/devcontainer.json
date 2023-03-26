@@ -9,7 +9,7 @@
   "workspaceFolder": "/workspace/${localWorkspaceFolderBasename}",
   "containerEnv": {
     "QT_X11_NO_MITSHM": "1",
-    "DISPLAY": ""
+    "DISPLAY": "${localEnv:DISPLAY}"
 },
   "mounts": [
     "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind"
