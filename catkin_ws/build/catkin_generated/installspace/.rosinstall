@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /workspace/src/Ros_package_image_segmentation/catkin_ws/install/setup.sh

@@ -1,0 +1,11 @@
+services: 
+  ROS_Seg:
+    #build: .
+    container_name: ROS_Segmentation
+    image: ros:noetic
+    volumes: 
+      - ./catkin_ws:/catkin_ws
+    
+    stdin_open: true 
+    tty: true
+    user: ${CURRENT_UID}
