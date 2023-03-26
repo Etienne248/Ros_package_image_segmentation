@@ -2,10 +2,17 @@ services:
   ROS_Seg:
     #build: .
     container_name: ROS_Segmentation
-    image: ros:noetic
+    image: osrf/ros:noetic-desktop-full
+
     volumes: 
       - ./catkin_ws:/catkin_ws
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    environment:
+    - "DISPLAY"
+    - "QT_X11_NO_MITSHM=1"
     
     stdin_open: true 
     tty: true
-    user: ${CURRENT_UID}
+    #entrypoint: [ "/ros_entrypoint.sh"]
+    #user: ${CURRENT_UID}
+    #command: "source /opt/ros/noetic/setup.bash"

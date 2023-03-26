@@ -1,11 +1,10 @@
 {
   "name": "osrf/ros:noetic-desktop-full",
-  "service": "ROS_Seg",
-  "dockerComposeFile": "Docker-compose.yaml",
-  /*"runArgs": [
+  "dockerFile": "Dockerfile",
+  "runArgs": [
     "--privileged",
     "--network=host"
-  ],*/
-  // "workspaceMount": "source=${localWorkspaceFolder},target=/workspace/src/${localWorkspaceFolderBasename},type=bind",
+  ],
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace/src/${localWorkspaceFolderBasename},type=bind",
   "workspaceFolder": "/workspace"
 }
