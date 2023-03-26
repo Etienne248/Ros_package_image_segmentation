@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspace/src/Ros_package_image_segmentation/catkin_ws/src
+CMAKE_SOURCE_DIR = /workspace/Ros_package_image_segmentation/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspace/src/Ros_package_image_segmentation/catkin_ws/build
+CMAKE_BINARY_DIR = /workspace/Ros_package_image_segmentation/catkin_ws/build
 
 # Utility rule file for rosgraph_msgs_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ ros_segmentation/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build: ro
 .PHONY : ros_segmentation/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
 
 ros_segmentation/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean:
-	cd /workspace/src/Ros_package_image_segmentation/catkin_ws/build/ros_segmentation && $(CMAKE_COMMAND) -P CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /workspace/Ros_package_image_segmentation/catkin_ws/build/ros_segmentation && $(CMAKE_COMMAND) -P CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : ros_segmentation/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
 
 ros_segmentation/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/depend:
-	cd /workspace/src/Ros_package_image_segmentation/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspace/src/Ros_package_image_segmentation/catkin_ws/src /workspace/src/Ros_package_image_segmentation/catkin_ws/src/ros_segmentation /workspace/src/Ros_package_image_segmentation/catkin_ws/build /workspace/src/Ros_package_image_segmentation/catkin_ws/build/ros_segmentation /workspace/src/Ros_package_image_segmentation/catkin_ws/build/ros_segmentation/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /workspace/Ros_package_image_segmentation/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspace/Ros_package_image_segmentation/catkin_ws/src /workspace/Ros_package_image_segmentation/catkin_ws/src/ros_segmentation /workspace/Ros_package_image_segmentation/catkin_ws/build /workspace/Ros_package_image_segmentation/catkin_ws/build/ros_segmentation /workspace/Ros_package_image_segmentation/catkin_ws/build/ros_segmentation/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ros_segmentation/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/depend
 

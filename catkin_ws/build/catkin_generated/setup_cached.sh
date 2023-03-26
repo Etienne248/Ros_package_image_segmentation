@@ -7,4 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/workspace/src/Ros_package_image_segmentation/catkin_ws/build'
+export CMAKE_PREFIX_PATH="/workspace/Ros_package_image_segmentation/catkin_ws/devel:$CMAKE_PREFIX_PATH"
+export PWD='/workspace/Ros_package_image_segmentation/catkin_ws/build'
+export ROSLISP_PACKAGE_DIRECTORIES='/workspace/Ros_package_image_segmentation/catkin_ws/devel/share/common-lisp'
+export ROS_PACKAGE_PATH="/workspace/Ros_package_image_segmentation/catkin_ws/src:$ROS_PACKAGE_PATH"

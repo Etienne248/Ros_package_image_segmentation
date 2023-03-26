@@ -67,14 +67,14 @@ set(ros_segmentation_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(ros_segmentation_SOURCE_PREFIX /workspace/src/Ros_package_image_segmentation/catkin_ws/src/ros_segmentation)
-  set(ros_segmentation_DEVEL_PREFIX /workspace/src/Ros_package_image_segmentation/catkin_ws/devel)
+  set(ros_segmentation_SOURCE_PREFIX /workspace/Ros_package_image_segmentation/catkin_ws/src/ros_segmentation)
+  set(ros_segmentation_DEVEL_PREFIX /workspace/Ros_package_image_segmentation/catkin_ws/devel)
   set(ros_segmentation_INSTALL_PREFIX "")
   set(ros_segmentation_PREFIX ${ros_segmentation_DEVEL_PREFIX})
 else()
   set(ros_segmentation_SOURCE_PREFIX "")
   set(ros_segmentation_DEVEL_PREFIX "")
-  set(ros_segmentation_INSTALL_PREFIX /workspace/src/Ros_package_image_segmentation/catkin_ws/install)
+  set(ros_segmentation_INSTALL_PREFIX /workspace/Ros_package_image_segmentation/catkin_ws/install)
   set(ros_segmentation_PREFIX ${ros_segmentation_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /workspace/src/Ros_package_image_segmentation/catkin_ws/install/lib;/workspace/src/Ros_package_image_segmentation/catkin_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /workspace/Ros_package_image_segmentation/catkin_ws/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

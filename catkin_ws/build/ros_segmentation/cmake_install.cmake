@@ -1,8 +1,8 @@
-# Install script for directory: /workspace/src/Ros_package_image_segmentation/catkin_ws/src/ros_segmentation
+# Install script for directory: /workspace/Ros_package_image_segmentation/catkin_ws/src/ros_segmentation
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/workspace/src/Ros_package_image_segmentation/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/workspace/Ros_package_image_segmentation/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/workspace/src/Ros_package_image_segmentation/catkin_ws/build/ros_segmentation/catkin_generated/installspace/ros_segmentation.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/workspace/Ros_package_image_segmentation/catkin_ws/build/ros_segmentation/catkin_generated/installspace/ros_segmentation.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_segmentation/cmake" TYPE FILE FILES
-    "/workspace/src/Ros_package_image_segmentation/catkin_ws/build/ros_segmentation/catkin_generated/installspace/ros_segmentationConfig.cmake"
-    "/workspace/src/Ros_package_image_segmentation/catkin_ws/build/ros_segmentation/catkin_generated/installspace/ros_segmentationConfig-version.cmake"
+    "/workspace/Ros_package_image_segmentation/catkin_ws/build/ros_segmentation/catkin_generated/installspace/ros_segmentationConfig.cmake"
+    "/workspace/Ros_package_image_segmentation/catkin_ws/build/ros_segmentation/catkin_generated/installspace/ros_segmentationConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_segmentation" TYPE FILE FILES "/workspace/src/Ros_package_image_segmentation/catkin_ws/src/ros_segmentation/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_segmentation" TYPE FILE FILES "/workspace/Ros_package_image_segmentation/catkin_ws/src/ros_segmentation/package.xml")
 endif()
 

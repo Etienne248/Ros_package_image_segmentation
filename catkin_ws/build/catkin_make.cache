@@ -1,2 +1,2 @@
 ros_segmentation
--DCATKIN_DEVEL_PREFIX=/workspace/src/Ros_package_image_segmentation/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/workspace/src/Ros_package_image_segmentation/catkin_ws/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/workspace/Ros_package_image_segmentation/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/workspace/Ros_package_image_segmentation/catkin_ws/install -G Unix Makefiles
