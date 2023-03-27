@@ -2,7 +2,6 @@
 from __future__ import print_function
 
 import roslib
-#roslib.load_manifest('my_package')
 import sys
 import rospy
 import cv2
@@ -13,7 +12,7 @@ from cv_bridge import CvBridge, CvBridgeError
 class image_converter:
 
   def __init__(self):
-    self.image_pub = rospy.Publisher("image_topic_2",Image)
+    self.image_pub = rospy.Publisher("image_topic_2",Image,queue_size=10)
 
     self.bridge = CvBridge()
     self.image_sub = rospy.Subscriber("image_topic",Image,self.callback)
