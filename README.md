@@ -21,6 +21,13 @@ Launch the ROS nodes
 ```bash
 roslaunch ros_segmentation all.launch
 ```
+
+Launch the test nodes
+
+```bash
+roslaunch ros_segmentation test.launch
+```
+
 ## Nodes
 ### pytorch_seg
 This node subscribes to the "image" topic, processes the image using PyTorch, generates a segmentation mask, and publishes it on the "segMask" topic.

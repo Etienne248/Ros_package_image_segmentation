@@ -22,6 +22,9 @@ class image_converter:
     except CvBridgeError as e:
       print(e)
 
+    timestamp = data.header.stamp
+    print(timestamp)
+
     (rows,cols,channels) = cv_image.shape
     if cols > 60 and rows > 300 :
       cv2.circle(cv_image, (300,150), 130, 0,-1)

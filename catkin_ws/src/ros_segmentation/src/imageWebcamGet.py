@@ -16,6 +16,8 @@ def talker():
       break
 
     msg = bridge.cv2_to_imgmsg(frame, "bgr8") 
+    msg.header.stamp = rospy.Time.now()
+    msg.header.frame_id = 'camera_frame'
     pub.publish(msg)
 
     cv2.imshow('camera image Window',frame)
