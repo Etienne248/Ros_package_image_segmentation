@@ -23,10 +23,11 @@ class image_converter:
       print(e)
 
     (rows,cols,channels) = cv_image.shape
-    if cols > 60 and rows > 60 :
-      cv2.circle(cv_image, (50,50), 10, 255)
+    if cols > 60 and rows > 300 :
+      cv2.circle(cv_image, (300,150), 130, 0,-1)
+      cv2.rectangle(cv_image, (300-200,200),(300+200,200+250), 0,-1)
 
-    #cv2.imshow("Image window", cv_image)
+    #cv2.imshow("pytorch_seg_receive", cv_image)
     #cv2.waitKey(3)
 
     try:

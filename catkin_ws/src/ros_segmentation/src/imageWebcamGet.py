@@ -18,6 +18,8 @@ def talker():
     msg = bridge.cv2_to_imgmsg(frame, "bgr8") 
     pub.publish(msg)
 
+    cv2.imshow('camera image Window',frame)
+
     if cv2.waitKey(1) & 0xFF == ord('q'):
       break
     

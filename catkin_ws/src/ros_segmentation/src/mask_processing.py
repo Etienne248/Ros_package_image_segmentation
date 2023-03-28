@@ -11,6 +11,8 @@ from cv_bridge import CvBridge, CvBridgeError
 class image_converter:
 
   def __init__(self):
+    
+    self.image_sub = rospy.Subscriber("image",Image,self.callback2)
 
     self.bridge = CvBridge()
     self.image_sub = rospy.Subscriber("segMask",Image,self.callback)
@@ -23,6 +25,9 @@ class image_converter:
 
     cv2.imshow("mask Image window", cv_image)
     cv2.waitKey(3)
+
+  def callback2(self,data):
+    pass
 
 def main(args):
   ic = image_converter()
