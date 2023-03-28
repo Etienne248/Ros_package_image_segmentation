@@ -3,7 +3,9 @@
   "dockerFile": "Dockerfile",
   "runArgs": [
     "--privileged",
-    "--network=host"
+    "--network=host",
+    //"--gpus = all",
+    "--ipc=host"
   ],
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace/${localWorkspaceFolderBasename},type=bind",
   "workspaceFolder": "/workspace/${localWorkspaceFolderBasename}",

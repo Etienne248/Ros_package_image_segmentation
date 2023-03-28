@@ -7,8 +7,8 @@ cap = cv2.VideoCapture(0)
 print(cap.isOpened())
 bridge = CvBridge()
 def talker():
-  pub = rospy. Publisher('/webcam', Image, queue_size = 10) 
-  rospy.init_node("image", anonymous = False) 
+  pub = rospy. Publisher('image', Image, queue_size = 10) 
+  rospy.init_node("camera", anonymous = False) 
   rate = rospy.Rate(10)
   while not rospy.is_shutdown(): 
     ret, frame = cap.read()

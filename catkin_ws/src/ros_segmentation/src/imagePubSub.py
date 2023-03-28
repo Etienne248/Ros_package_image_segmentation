@@ -11,10 +11,10 @@ from cv_bridge import CvBridge, CvBridgeError
 class image_converter:
 
   def __init__(self):
-    self.image_pub = rospy.Publisher("image_topic_2",Image,queue_size=10)
+    self.image_pub = rospy.Publisher("segMask",Image,queue_size=10)
 
     self.bridge = CvBridge()
-    self.image_sub = rospy.Subscriber("/webcam",Image,self.callback)
+    self.image_sub = rospy.Subscriber("image",Image,self.callback)
 
   def callback(self,data):
     try:
@@ -36,7 +36,7 @@ class image_converter:
 
 def main(args):
   ic = image_converter()
-  rospy.init_node('image_converter', anonymous=True)
+  rospy.init_node('pytorch_seg', anonymous=True)
   try:
     rospy.spin()
   except KeyboardInterrupt:
