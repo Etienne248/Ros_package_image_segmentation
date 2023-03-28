@@ -7,7 +7,7 @@ cap = cv2.VideoCapture(0)
 print(cap.isOpened())
 bridge = CvBridge()
 def talker():
-  pub = rospy. Publisher('/webcam', Image, queue_size = 1) 
+  pub = rospy. Publisher('/webcam', Image, queue_size = 10) 
   rospy.init_node("image", anonymous = False) 
   rate = rospy.Rate(10)
   while not rospy.is_shutdown(): 
@@ -20,9 +20,8 @@ def talker():
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
       break
-
-    if rospy.is_shutdown(): 
-      cap.release()
+    
+  cap.release()
 
 if __name__ == '__main__':
   try:

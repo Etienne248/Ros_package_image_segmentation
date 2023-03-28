@@ -14,7 +14,7 @@ class image_converter:
     self.image_pub = rospy.Publisher("image_topic_2",Image,queue_size=10)
 
     self.bridge = CvBridge()
-    self.image_sub = rospy.Subscriber("image_topic",Image,self.callback)
+    self.image_sub = rospy.Subscriber("/webcam",Image,self.callback)
 
   def callback(self,data):
     try:

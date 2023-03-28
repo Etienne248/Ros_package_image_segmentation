@@ -15,9 +15,7 @@
     "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind"
   ],
   "customizations": {
-    // Configure properties specific to VS Code.
     "vscode": {
-      // Add the IDs of extensions you want installed when the container is created.
       "extensions": [
         "ms-python.python"
       ]
