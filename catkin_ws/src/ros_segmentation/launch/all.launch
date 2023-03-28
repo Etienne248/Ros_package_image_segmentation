@@ -1,0 +1,5 @@
+<launch>
+    <node name="camera" pkg="ros_segmentation" type="imageWebcamGet.py" />
+    <node name="pytorch_seg" pkg="ros_segmentation" type="imagePubSub.py" output="screen" />
+    <node name="mask_processing" pkg="ros_segmentation" type="mask_processing.py" />
+</launch>

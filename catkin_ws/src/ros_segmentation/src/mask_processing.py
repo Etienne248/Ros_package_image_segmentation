@@ -11,10 +11,9 @@ from cv_bridge import CvBridge, CvBridgeError
 class image_converter:
 
   def __init__(self):
-    self.image_pub = rospy.Publisher("segMask",Image,queue_size=10)
 
     self.bridge = CvBridge()
-    self.image_sub = rospy.Subscriber("image",Image,self.callback)
+    self.image_sub = rospy.Subscriber("segMask",Image,self.callback)
 
   def callback(self,data):
     try:
@@ -22,21 +21,12 @@ class image_converter:
     except CvBridgeError as e:
       print(e)
 
-    (rows,cols,channels) = cv_image.shape
-    if cols > 60 and rows > 60 :
-      cv2.circle(cv_image, (50,50), 10, 255)
-
-    #cv2.imshow("Image window", cv_image)
-    #cv2.waitKey(3)
-
-    try:
-      self.image_pub.publish(self.bridge.cv2_to_imgmsg(cv_image, "bgr8"))
-    except CvBridgeError as e:
-      print(e)
+    cv2.imshow("mask Image window", cv_image)
+    cv2.waitKey(3)
 
 def main(args):
   ic = image_converter()
-  rospy.init_node('pytorch_seg', anonymous=False)
+  rospy.init_node('mask_processing', anonymous=False)
   try:
     rospy.spin()
   except KeyboardInterrupt:
