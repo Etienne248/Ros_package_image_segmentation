@@ -23,6 +23,9 @@ class image_converter:
     except CvBridgeError as e:
       print(e)
 
+    timestamp = data.header.stamp
+    print(timestamp)
+
     cv2.imshow("mask Image window", cv_image)
     cv2.waitKey(3)
 

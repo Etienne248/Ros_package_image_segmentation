@@ -3,9 +3,9 @@
   "dockerFile": "Dockerfile",
   "runArgs": [
     "--privileged",
-    "--network=host",
+    "--network=host"
     //"--gpus = all",
-    "--ipc=host"
+    //"--ipc=host"
   ],
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace/${localWorkspaceFolderBasename},type=bind",
   "workspaceFolder": "/workspace/${localWorkspaceFolderBasename}",
@@ -19,7 +19,8 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "ms-python.python"
+        "ms-python.python",
+        "mhutchie.git-graph"
       ]
     }
   }

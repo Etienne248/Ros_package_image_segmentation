@@ -33,8 +33,10 @@ class image_converter:
     #cv2.imshow("pytorch_seg_receive", cv_image)
     #cv2.waitKey(3)
 
+    msg = self.bridge.cv2_to_imgmsg(cv_image, "bgr8")
+    msg.header.stamp = rospy.Time.now()
     try:
-      self.image_pub.publish(self.bridge.cv2_to_imgmsg(cv_image, "bgr8"))
+      self.image_pub.publish(msg)
     except CvBridgeError as e:
       print(e)
 
