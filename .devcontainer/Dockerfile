@@ -4,7 +4,7 @@ FROM osrf/ros:noetic-desktop-full
 RUN apt update && apt upgrade -y
 
 # Install Git
-RUN apt install -y git python3-pip
+RUN apt install -y git python3-pip xauth
 
 # Rosdep update
 RUN rosdep update

@@ -5,7 +5,7 @@ This ROS package performs image segmentation using PyTorch and runs in a Docker 
 Clone this repository to your machine
 
 ```bash
-git clone https://github.com/your-username/ros_segmentation.git
+git clone https://github.com/Etienne248/Ros_package_image_segmentation.git
 ```
 Build the Docker container using the Dockerfile provided
 ```bash
